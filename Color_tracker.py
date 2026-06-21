@@ -42,42 +42,42 @@ while True:
             center_y = y + h//2
 
 # To green boundary around the blue image
-        cv2.rectangle(
-            frame,
-            (x, y),
-            (x+w, y+h),
-            (0,255,0),
-            2
-        
-        )
-# To add a red circle in center
-        cv2.circle (
-            frame,
-            (center_x, center_y),
-            5,
-            (0, 0, 255),
-            -1
-        )
+            cv2.rectangle(
+                frame,
+                (x, y),
+                (x+w, y+h),
+                (0,255,0),
+                2
+            
+            )
+    # To add a red circle in center
+            cv2.circle (
+                frame,
+                (center_x, center_y),
+                5,
+                (0, 0, 255),
+                -1
+            )
 
-        cv2.putText(
-            frame,
-            f"X={center_x} Y={center_y}",
-            (x, y-10),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.6,
-            (0,255,0),
-            2
-        )
+            cv2.putText(
+                frame,
+                f"X={center_x} Y={center_y}",
+                (x, y-10),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0,255,0),
+                2
+            )
 
-        cv2.putText(
-            frame,
-            f"Area={int(area)}",
-            (x, y+h+25),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.6,
-            (0,255,0),
-            2
-        )
+            cv2.putText(
+                frame,
+                f"Area={int(area)}",
+                (x, y+h+25),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0,255,0),
+                2
+            )
 
     cv2.imshow("Original", frame)
     cv2.imshow("Mask", mask)
