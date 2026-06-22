@@ -1,4 +1,4 @@
 opencv-python==4.13.0.92
 numpy==2.4.6
-
+mideapipe
 and basics of python
